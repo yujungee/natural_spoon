@@ -44,7 +44,7 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 DATABASES = {
     "default": env.db(
         "DATABASE_URL",
-        default="postgres://localhost/natural_spoon",
+        default="postgres://postgres:yujung3044@localhost:5432/natural_spoon",
     ),
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
@@ -81,6 +81,9 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "natural_spoon.users",
+    "natural_spoon.product",
+    "natural_spoon.order",
+
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
